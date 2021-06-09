@@ -6,8 +6,20 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header></header>
-    <main></main>
+    <!-- encabezado -->
+    <header>
+      <h1>Card Valitation</h1>
+    </header>
+    <!-- contenido principal -->
+    <main>
+      <!-- caja de texto y boton, que sea solo numero y no este vacio-->
+      <input type="text" id="numCard" required="" maxlength="9">
+      <input type="submit" id="miBoton">
+      <h1 id="respValido">Es valido</h1>
+      <h1 id="respNoValido">No es valido</h1>
+    </main>
+
+    <!-- pie de página -->
     <footer></footer>
     <script src="index.js" type="module"></script>
   </body>
