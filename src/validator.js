@@ -1,38 +1,46 @@
-
+//import { createConfigItem } from "@babel/core";
 
 const validator = {
-  isValid: function(){
-    let numerosTarjeta = document.getElementById('numCard').value;
+  isValid: function validar(n){
+    let digitos = n.toString().split('').map(Number);//cadena, int
 
-    let digitos = numerosTarjeta.toString().split('').map(Number);//numeros en cadena, pasado de string a int
+    digitos.reverse();//inverso
+    console.log(digitos);
 
-    digitos.reverse();//mostrarlos en orden inverso un arreglo
-    //console.log(digitos);
+    /* multiplicando posicion par */
+      digitos = digitos.map((digitos, i) =>{
+      if(i%2 === 1){
+        return digitos*2;
+      }else{
+        return digitos;
+      }
+    });
 
-    /* esta multiplicando a los numeros de posicion par */
-    if(digitos.length % 2 === 0){
-      digitos = digitos.map((digitos, i) => i%2 === 0 ? digitos * 2 : digitos);
-    }else{
-      digitos = digitos.map((digitos, i) => i%2 === 1 ? digitos * 2 : digitos);
-    }
-    //console.log(digitos);
+    console.log(digitos);
 
-    /* sumando los digitos de los pares */
-    digitos = digitos.map(digitos => digitos > 9 ? digitos -9 : digitos);
+    /* sumando digitos de pares */
+    let digitosPar = digitos.map((digitos) =>{
+      if(digitos > 9){
+        return digitos - 9;
+      }else{
+        return digitos;
+      }
+    });
 
-    /* sumando los digitos */
-    const sum = digitos.reduce((acc, digitos) => acc += digitos, 0);
+    /* sumando todos los digitos */
+    const totalSum = digitosPar.reduce((acc, digitosPar) => acc = acc + digitosPar, 0);
 
-    /* condicional si el residuo es igual a 0 es valido sino invalido */
-    if(sum % 10 == 0){
-      document.getElementById('respValido').style.display = 'block';
-    }else{
-      document.getElementById('respNoValido').style.display = 'block';
-    }
-    
-    //console.log(digitos);
-    //console.log(sum);
-    //console.log(numerosTarjeta);
+    console.log(digitosPar);
+    console.log(totalSum);
+    console.log(n);
+
+    /* valido o invalido */
+    return totalSum % 10 === 0;  
+  },
+
+  maskify: function mostrar(nu){
+   let numOculto = nu.split('').map((letter, i) => i < nu.length - 4 ? '#' : letter).join('');
+   return numOculto;
   }
 };
 
