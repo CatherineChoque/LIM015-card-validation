@@ -8,17 +8,83 @@
   <body>
     <!-- encabezado -->
     <header>
-      <h1>Card Valitation</h1>
+      <!--<h1>Card Valitation</h1>-->
     </header>
     <!-- contenido principal -->
     <main>
+    <div class="container-general">
+
       <!-- caja de texto y boton, que sea solo numero y no este vacio-->
-      <input type="text" id="numCard" maxlength="16">
-      <input type="button" id="miBoton" value="enviar">
-      <h1 id="respValido">Es valido</h1>
-      <h1 id="numeroOculto"></h1>
-      <h1 id="respNoValido">No es valido</h1>
-    </main>
+      <div class="container-izquierda">
+      <h1 id="tituloDatos" >Ingresa los datos de tu tarjeta</h1>
+      <div class="card-inputs" id="cardInputs">
+        
+        <div class="card">
+          <img class="logo" src="img/logovisa.png" alt="logo visa">
+          <div class="numeros">
+            <div class="gruponumeros">****</div>
+            <div class="grupo-numeros-1">****</div>
+            <div class="grupo-numeros-2">****</div>
+            <div class="grupo-numeros-3">****</div>
+          </div>
+          <div class="detalles-card">
+            <div class="holder"> 
+              <span class="holder-titulo">Titular de la tarjeta</span>
+              <span class="holder-name">Nombre y Apellido</span>
+            </div>
+            <div class="fecha">
+              <span class="fecha-titulo">Expira</span>
+              <span class="fecha-expiracion">MM/AA</span>
+            </div>
+          </div>
+        </div>
+
+      <form action="" class="inputs-container">
+      <div class="detalles-input">
+      <input class="input1" type="text" id="numCard" maxlength="16" placeholder="Numero de tarjeta">
+      <input class="input4" type="text" id="" placeholder="Expira">
+      </div>
+      <div class="detalles-input">
+      <input class="input2" type="text" id="" placeholder="Nombre del Titular">
+      <input class="input3" type="text" id="" placeholder="Código">
+      </div>
+      </form>
+
+    </div>
+
+      <input class="btn2" type="button" id="reload" value="refrescar">
+      <input class="btn" type="button" id="miBoton" value="enviar">
+
+      <h1 id="tituloValido">Compra exitosa</h1>
+      <img class="iconos" src="img/valido.png" id="respValido" alt="check">
+
+      <h1 id="tituloNoValido">Numero de tarjeta Invalida</h1>
+      <img class="iconos" src="img/novalido.png" id="respNoValido" alt="check">
+
+      </div>
+      <!-- fin izquierdo-->
+
+      
+      <div class="container-derecha">
+        <h1>Cathe Shop</h1>
+
+        <div class="compra">
+          <div class="detalles">
+            <div class="titulo"> 
+              <h2>Detalle de compra</h2>
+            </div>
+            <div class="detalles-compra">
+              <h3>Productos</h3>
+              <h3>s/38</h3>
+            </div>
+          </div>
+          
+        </div>
+
+      </div>
+
+    </div>
+  </main>
 
     <!-- pie de página -->
     <footer></footer>

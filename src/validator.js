@@ -39,11 +39,20 @@ const validator = {
   },
 
   maskify: function mostrar(nu){
-   let numOculto = nu.split('').map((letter, i) => i < nu.length - 4 ? '#' : letter).join('');
+   //let numOculto = nu.split('').map((letter, i) => i < nu.length - 4 ? '#' : letter).join('');
+
+   let numOculto = '';
+   for(let i = 0; i < nu.length; i++ ){
+     if(i < nu.length-4){
+      numOculto = numOculto + '#'
+     }else{
+       numOculto = numOculto + nu[i]
+     }
+   }
+   console.log(numOculto);
+
    return numOculto;
   }
 };
-
-//console.log(validator);
 
 export default validator;

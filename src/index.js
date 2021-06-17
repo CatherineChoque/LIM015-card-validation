@@ -17,9 +17,16 @@ function captura(){
     }*/
     const isValido = validator.isValid(numeros);
     if(isValido){
+        document.getElementById('tituloValido').style.display = 'block';
         document.getElementById('respValido').style.display = 'block';
+        document.getElementById('reload').style.display = 'block';
+        document.getElementById('miBoton').style.display = 'none';
+
     }else{
+        document.getElementById('tituloNoValido').style.display = 'block';
         document.getElementById('respNoValido').style.display = 'block';
+        document.getElementById('reload').style.display = 'block';
+        document.getElementById('miBoton').style.display = 'none';
     }
     const ocultar = validator.maskify(numeros);
     if(ocultar){
@@ -40,4 +47,9 @@ function escribeNum(e){
     }
 }
 
-/*console.log(validator);*/
+// ----- refesca la pagina -------//
+const reload = document.getElementById('reload');
+reload.addEventListener('click', recargar);
+function recargar(){
+    location.reload();
+}
