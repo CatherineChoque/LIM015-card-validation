@@ -1,0 +1,267 @@
+/* link de tipografias*/
+
+/* variables */
+:root {
+    font-size: 100%;
+    font-size: 15px;
+    --title-bg: #9089cc;
+    --button-bg: #674baf;
+    --light-pink: #e882e8;
+    /* variables para la tarjeta*/
+    --white: #fafafa;
+    --violet: #e2d8fd;
+    --dark-blue: #8e73d3;
+    --gray1: #e1e1e1;
+    --gray2: #6a6a6a;
+}
+
+/* body */
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #c1b3e2;
+}
+
+
+/* iconos check y aspa */
+.iconos {
+    width: 45px;
+    height: 45px;
+    margin: 20px 0 5px 0;
+}
+
+/* contenedor general*/
+.container-general {
+    height: 43.75em;
+    width: 50em;
+    margin: 6em auto;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 15px;
+    text-align: left;
+}
+
+/* contenedor izquierda */
+.container-izquierda {
+    /*border: 2px solid red;*/
+    width: 60%;
+    margin: 0px 30px 0px 0px;
+    flex-direction: column;
+}
+
+/* contenedor derecho */
+.container-derecha {
+   /* border: 2px solid pink;*/
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.card-inputs {
+    background-color: #ebebeb;
+    border-radius: 10px;
+    padding-top: 5px;
+}
+
+.compra {
+    background-color: #ebebeb;
+    border-radius: 10px;
+    padding-top: 5px;
+}
+
+/* estilos a los inputs */
+.inputs-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto 20px;
+}
+.detalles-input {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.titulo {
+    margin: 0px 20px 0px 20px;
+    font-size: 10px;
+    font-family: Helvetica, sans-serif;
+}
+
+.detalles-compra {
+    font-size: 11px;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto 10px;
+    font-family: Helvetica, sans-serif;
+}
+
+/* estilo al input y boton */
+.input1,
+.input2,
+.input3,
+.input4,
+.btn,
+.btn2 {
+    height: 3.125rem;
+    font-size: 1em;
+}
+
+.input1,
+.input2 {
+    padding-left: 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+    margin: 15px 0px;
+    width: 60%;
+    float: left;
+    position: relative;
+}
+
+.input4,
+.input3 {
+    padding-left: 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+    margin: 15px 0px;
+    width: 30%;
+    float: left;
+    position: relative;
+}
+
+/* cambia de color el input al pasar el cursor */
+.input1:hover {
+    border: 2px solid var(--button-bg);
+}
+.input2:hover {
+    border: 2px solid var(--button-bg);
+}
+
+.input3:hover {
+    border: 2px solid var(--button-bg);
+}
+
+.input4:hover {
+    border: 2px solid var(--button-bg);
+}
+
+/* boton*/
+.btn {
+    width: 40%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ffff;
+    border-radius: 5px;
+    background-color: var(--button-bg);
+    cursor: pointer;
+    border: none;
+}
+
+.btn2 {
+    width: 40%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ffff;
+    border-radius: 5px;
+    background-color: #9b9b9b;
+    cursor: pointer;
+    border: none;
+}
+
+/* diseño card */
+.card {
+   /*border: 2px solid blue;*/
+    width: 250px;
+    height: 180px;
+    position: relative;
+    margin: 15px auto 15px;
+    border-radius: 20px;
+    background: var(--dark-blue);
+    padding: 0 2rem;
+}
+
+.numeros,
+.holder-name,
+.fecha-expiracion {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1.3rem;
+    text-shadow: 0 1.2px var(--gray2);
+    color: var(--white);
+    letter-spacing: 1px;
+}
+
+.logo {
+    width: 5rem;
+    height: 1.5rem;
+    margin: 1rem 0 45px 0;
+}
+
+.numeros {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.detalles-card {
+    display: flex;
+    justify-content: space-between;
+}
+
+.holder,
+.fecha {
+    display: flex;
+    flex-direction: column;
+}
+
+.holder-titulo,
+.fecha-titulo {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--white);
+    opacity: 0.6;
+    font-size: 0.7rem;
+    margin-bottom: 0.1rem;
+}
+
+.holder-name,
+.fecha-expiracion {
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+#miBoton {
+    display: block;
+}
+
+#tituloValido {
+    display: none;
+}
+
+#tituloNoValido {
+    display: none;
+}
+
+#respValido{
+    display: none;
+}
+#respNoValido{
+    display: none;
+}
+
+#reload {
+    display: none;
+}
